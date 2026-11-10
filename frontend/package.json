@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@fontsource/manrope": "5.1.0",
-    "@fontsource/noto-sans-tamil": "^5.1.0",
     "@fontsource/sora": "5.1.0",
     "@react-oauth/google": "0.12.1",
     "react": "18.3.1",

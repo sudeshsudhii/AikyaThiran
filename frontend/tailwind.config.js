@@ -11,9 +11,8 @@ export default {
         danger: "#B42318",
       },
       fontFamily: {
-        display: ['"Sora"', '"Noto Sans Tamil"', "system-ui", "sans-serif"],
-        sans: ['"Manrope"', '"Noto Sans Tamil"', "system-ui", "sans-serif"],
-        tamil: ['"Noto Sans Tamil"', "system-ui", "sans-serif"],
+        display: ['"Sora"', "system-ui", "sans-serif"],
+        sans: ['"Manrope"', "system-ui", "sans-serif"],
       },
       borderRadius: { xl2: "1.25rem" },
       keyframes: {

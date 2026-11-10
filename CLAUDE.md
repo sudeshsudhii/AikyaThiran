@@ -1,7 +1,9 @@
 # AikyaThiran — project notes for Claude
 
 AikyaThiran (aikyathiran.in) is a web app for students: learn skills, study smarter with AI, grow together.
-"Aikya" = unity/together, "Thiran" = skill (Tamil). Owner: Sudesh P. **Explain things in simple, easy English.**
+Owner: Sudesh P. **Explain things in simple, easy English.**
+
+**Global product:** English only. No Tamil text, Tamil fonts or regional references anywhere in the UI or copy.
 
 More background (name, products, logo history): see `brand/BRAND-CONTEXT.md`. Logo files: `brand/logo/`.
 
@@ -17,7 +19,7 @@ More background (name, products, logo history): see `brand/BRAND-CONTEXT.md`. Lo
 
 ## Brand
 - Colors: teal `#025049` (deep `#013A35`, soft `#DCEDEA`), sun/marigold `#FEB803` (soft `#FFF1C2`), ink `#12221F`, paper `#F4F8F7`.
-- Fonts: Sora (display), Manrope (body), Noto Sans Tamil (Tamil text). Loaded via @fontsource.
+- Fonts: Sora (display), Manrope (body). Loaded via @fontsource.
 - Logo: "Sunrise T" — bold T crossing a rising sun. Component: `frontend/src/components/Logo.tsx` (`LogoMark`, `Wordmark`).
 - Design rules: one memorable moment (sun rising once on landing), no generic SaaS card grids, no ALL-CAPS eyebrow labels,
   no numbered markers unless it is a real sequence, no "→" in buttons, sentence case, plain active-voice copy.
@@ -29,13 +31,13 @@ Done:
   components (`Logo`, `GoogleSignIn`, `RequireAuth`, `AppShell`, `Toast`), `public/favicon.svg`.
 
 TODO (next steps):
-1. `frontend/src/pages/Landing.tsx` — top bar with Wordmark; hero with bilingual headline
-   "Learn skills. Grow together." / "திறன் வளர்ப்போம், ஒன்றாக." (font-tamil); `<GoogleSignIn />` block with note
+1. `frontend/src/pages/Landing.tsx` — top bar with Wordmark; hero with headline
+   "Learn skills. Grow together."; `<GoogleSignIn />` block with note
    "Free for students. We only use your name, email and photo from Google."; big rising sun on a horizon line behind the
    LogoMark using `animate-rise` (once, on load) + `animate-fadein`; a simple list (not cards) of the 3 tools:
    Thiran Skills (skill tracks + progress), Thiran Paath (AI study helper, notes, planner), Aikyam (student community) —
-   each "Opening soon"; footer "Made in Tamil Nadu", aikyathiran.in, © year.
-2. `frontend/src/pages/Dashboard.tsx` — greeting "Vanakkam, {first name}" (+ Tamil வணக்கம்); if `!user.profile_complete`
+   each "Opening soon"; footer with © year AikyaThiran and aikyathiran.in.
+2. `frontend/src/pages/Dashboard.tsx` — greeting "Welcome back, {first name}"; if `!user.profile_complete`
    show a sun-soft banner with "Complete your profile" button to `/profile`; list of the 3 tools with "Opening soon";
    the student's interests as chips with an "Edit" link.
 3. `frontend/src/pages/Profile.tsx` — form: name, college, course, year of study (1–6 select), interests as chips
