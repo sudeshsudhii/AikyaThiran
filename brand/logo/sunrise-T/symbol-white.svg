@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="16 28 480 482"><mask id="m3"><rect width="512" height="512" fill="#fff"/><path d="M40 134H472V252H316V486H196V252H40Z" fill="#000"/></mask>
+<circle cx="256" cy="236" r="168" fill="#FEB803" mask="url(#m3)"/>
+<rect x="56" y="150" width="400" height="86" rx="24" fill="#FFFFFF"/>
+<rect x="212" y="150" width="88" height="320" rx="24" fill="#FFFFFF"/></svg>

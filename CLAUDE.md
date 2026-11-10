@@ -3,6 +3,8 @@
 AikyaThiran (aikyathiran.in) is a web app for students: learn skills, study smarter with AI, grow together.
 "Aikya" = unity/together, "Thiran" = skill (Tamil). Owner: Sudesh P. **Explain things in simple, easy English.**
 
+More background (name, products, logo history): see `brand/BRAND-CONTEXT.md`. Logo files: `brand/logo/`.
+
 ## Stack
 - `backend/` — FastAPI + SQLAlchemy 2 (SQLite by default, `DATABASE_URL` for Postgres), Google sign-in.
 - `frontend/` — React 18 + Vite 5 + TypeScript + Tailwind 3. Dev server proxies `/api` to `localhost:8000`.
