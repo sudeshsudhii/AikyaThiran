@@ -27,25 +27,14 @@ More background (name, products, logo history): see `brand/BRAND-CONTEXT.md`. Lo
 ## Status
 Done:
 - Backend complete, 10 tests passing (`cd backend && pip install -r requirements-dev.txt && pytest -q`).
-- Frontend: config, Tailwind theme, `index.css`, `main.tsx`, `App.tsx` (routes), `lib/api.ts`, `auth/AuthContext.tsx`,
-  components (`Logo`, `GoogleSignIn`, `RequireAuth`, `AppShell`, `Toast`), `public/favicon.svg`.
+- Frontend complete for v0.1 and `npm run build` passes: Landing (`/`), Dashboard (`/dashboard`), Profile
+  (`/profile`, `?welcome=1` after first sign-in), NotFound. Shared tool list in `components/Tools.tsx`.
+- Checked with Playwright screenshots at 1280px and iPhone size (Google button stubbed in the sandbox).
 
 TODO (next steps):
-1. `frontend/src/pages/Landing.tsx` — top bar with Wordmark; hero with headline
-   "Learn skills. Grow together."; `<GoogleSignIn />` block with note
-   "Free for students. We only use your name, email and photo from Google."; big rising sun on a horizon line behind the
-   LogoMark using `animate-rise` (once, on load) + `animate-fadein`; a simple list (not cards) of the 3 tools:
-   Thiran Skills (skill tracks + progress), Thiran Paath (AI study helper, notes, planner), Aikyam (student community) —
-   each "Opening soon"; footer with © year AikyaThiran and aikyathiran.in.
-2. `frontend/src/pages/Dashboard.tsx` — greeting "Welcome back, {first name}"; if `!user.profile_complete`
-   show a sun-soft banner with "Complete your profile" button to `/profile`; list of the 3 tools with "Opening soon";
-   the student's interests as chips with an "Edit" link.
-3. `frontend/src/pages/Profile.tsx` — form: name, college, course, year of study (1–6 select), interests as chips
-   (add with Enter, remove with ×, max 20). "Save changes" -> `updateProfile` from `useAuth()` -> `<Toast>` "Profile saved".
-   If URL has `?welcome=1`, show a short welcome line and after saving go to `/dashboard`.
-4. `frontend/src/pages/NotFound.tsx` — LogoMark, "This page doesn't exist.", link "Go to home".
-5. `npm run build` must pass; check pages with Playwright screenshots at 1280px and 375px.
-6. Write `README.md` (simple English): Google Cloud OAuth client setup (Web app; Authorized JavaScript origins
+1. Write `README.md` (simple English): Google Cloud OAuth client setup (Web app; Authorized JavaScript origins
    `http://localhost:5173` and later `https://aikyathiran.in`), copy `backend/.env.example` to `.env`, run backend
    (`uvicorn app.main:app --reload`) and frontend (`npm install && npm run dev`).
-7. Later: Alembic migrations, Docker, deploy, CSRF hardening for cookie auth.
+2. Test real Google sign-in with a real client id.
+3. Mobile: add Home/Profile links to the user menu (top nav is hidden below md).
+4. Later: Alembic migrations, Docker, deploy, CSRF hardening for cookie auth, then build Thiran Skills.
